@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "build": [
+  "builds": [
     {
       "src": "shoppinglyx/wsgi.py",
       "use": "@vercel/python",
