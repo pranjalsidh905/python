@@ -25,7 +25,7 @@ SECRET_KEY = '8o353)z(_*^04+jhey!m*q3_no@vhn*7v8(6xz4rl6=kunu=it'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['.vercel.app',"now.sh"]
+ALLOWED_HOSTS = ['.vercel.app',"now.sh" ,'127.0.0.1', 'localhost']
 
 
 # Application definition
@@ -51,11 +51,11 @@ MIDDLEWARE = [
 ]
 
 ROOT_URLCONF = 'shoppinglyx.urls'
-
+import os 
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [os.path.join(BASE_DIR, 'templates')],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -119,6 +119,7 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.1/howto/static-files/
 
 STATIC_URL = '/static/'
+
 import os
-STATICFITLES_DTRS = os.path.join(BASE_DIR,"static"),
-STATIC_ROOT = os.path.join(BASE_DIR,"staticfiles_build","static")
+STATICFITLES_DTRS = os.path.join(BASE_DIR,'static'),
+STATIC_ROOT = os.path.join(BASE_DIR,'staticfiles_build','static')
